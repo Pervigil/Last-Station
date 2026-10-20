@@ -1,35 +1,45 @@
 # Last Station
 
-A minimalist, dark-themed home for your novels, with a working chapter list and reading interface.
+**A home for stories still on their way.**
 
-## Files
+Last Station is a minimalist, independent reading site for original fiction, works in progress, and the occasional story that is still finding its shape.
 
-- `index.html` — design, novel list, search, novel detail pages, reader layout, and chapter navigation.
-- `works.js` — all content: descriptions, novel titles, chapter titles, statuses, and chapter text.
+**Live site:** https://last-station.vercel.app/
 
-## Add a novel
+## About the project
 
-Add an object to `works` in `works.js`. Give it a unique `id`, a title, a type, a status, a short description, a longer description, and a `chapters` array. Use lowercase ids with hyphens.
+The site currently features:
 
-## Add a chapter
+- A searchable library of stories
+- Dedicated novel pages and chapter-by-chapter reading
+- Reader accounts and reading-progress tracking
+- Adjustable reading themes, fonts, text size, and line spacing
+- A small author interface for managing published work
 
-Add an object to that novel's `chapters` array:
+The design is intentionally quiet: the stories should take up more space than the interface around them.
 
-```js
-{
-  id: "chapter-4",
-  title: "Chapter 4 · Your Chapter Title",
-  status: "Draft",
-  placeholder: false,
-  content: "First paragraph.\\n\\nSecond paragraph."
-}
-```
+## Stories
 
-- Each chapter id must be unique within its novel.
-- Separate paragraphs using `\\n\\n`.
-- Set `placeholder: false` when the text is real.
-- The reader creates chapter URLs from the novel and chapter ids, and Previous / Next navigation follows the order in the array.
+- **Mortal Records of Endless Returns** — a wuxia/xianxia story about a life that ends, a world that carries on, and the uncertain road back.
+- **Where Moonlight Falls** — a quieter slice-of-life project about distance, unfinished words, and the things people struggle to say.
 
-## Publish
+Both projects are works in progress, so details and chapters may change as they develop.
 
-Commit your changes to the GitHub `main` branch. Once Vercel is connected to this repository, it should deploy automatically. No build command is needed for this plain HTML/CSS/JavaScript site.
+## Built with
+
+- HTML, CSS, and vanilla JavaScript
+- Supabase for authentication and data
+- Vercel for deployment
+
+The site is intentionally lightweight and does not require a frontend build step.
+
+## Project structure
+
+- `index.html` — page layout, styling, navigation, reader, settings, and account interface.
+- `works.js` — story metadata and the local manuscript/content configuration.
+
+Some publishing and reader data is managed through Supabase, rather than being stored only in the local content file.
+
+## Note
+
+This is a personal writing project built to give unfinished stories a place to live while they grow. It is not intended to be a polished, open publishing platform, and the content remains the author's original work.
