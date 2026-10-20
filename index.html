@@ -28,6 +28,7 @@ const config = window.LAST_STATION || {siteTitle:'Last Station',message:'A place
 const app = document.getElementById('app');
 document.getElementById('year').textContent = new Date().getFullYear();
 const esc = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const formatChapterTitle = title => String(title || '').replace(/\bchapter\s*(\d+)/i, 'Chapter $1').replace(/\s*[·•]\s*/, ' - ');
 const route = () => decodeURIComponent(location.hash.slice(1) || '/');
 const allWorks = config.works || [];
 function crumb(label){return '<div class="breadcrumb"><a href="#/">Works</a><span>/</span><span>'+esc(label)+'</span></div>'}
@@ -50,7 +51,7 @@ function renderReader(id,chapterId){
  const c=chapters[index];if(!c){renderNovel(id);return}
  document.title=c.title+' — '+w.title;
  const content=c.content||'This chapter is a placeholder. Replace this text with your manuscript when it is ready.';
- app.innerHTML='<div class="reader-top"><a href="#/novel/'+encodeURIComponent(w.id)+'">← '+esc(w.title)+'</a><span>'+String(index+1).padStart(2,'0')+' / '+String(chapters.length).padStart(2,'0')+'</span></div><article><h1 class="reader-title">'+esc(c.title)+'</h1><div class="reader-chapter">'+esc(w.type||'Novel')+' · '+esc(c.status||'Placeholder chapter')+'</div><div class="prose">'+content.split(/\n\s*\n/).map(p=>'<p>'+esc(p)+'</p>').join('')+'</div>'+(c.placeholder?'<div class="placeholder">PLACEHOLDER TEXT · Replace the chapter content in <code>works.js</code>. The reading layout and chapter navigation are already wired up.</div>':'')+'<div class="reader-end">— END OF CHAPTER —</div></article><div class="reader-controls"><button class="reader-btn" id="prev" '+(index===0?'disabled':'')+'>← Previous</button><a class="reader-btn" href="#/novel/'+encodeURIComponent(w.id)+'">Chapter list</a><button class="reader-btn" id="next" '+(index===chapters.length-1?'disabled':'')+'>Next →</button></div>';
+ app.innerHTML='<div class="reader-top"><a href="#/novel/'+encodeURIComponent(w.id)+'">← '+esc(w.title)+'</a><span>'+String(index+1).padStart(2,'0')+' / '+String(chapters.length).padStart(2,'0')+'</span></div><article><h1 class="reader-title">'+esc(formatChapterTitle(c.title))+'</h1><div class="prose">'+content.split(/\n\s*\n/).map(p=>'<p>'+esc(p)+'</p>').join('')+'</div>'+(c.placeholder?'<div class="placeholder">PLACEHOLDER TEXT · Replace the chapter content in <code>works.js</code>. The reading layout and chapter navigation are already wired up.</div>':'')+'<div class="reader-end">— END OF CHAPTER —</div></article><div class="reader-controls"><button class="reader-btn" id="prev" '+(index===0?'disabled':'')+'>← Previous</button><a class="reader-btn" href="#/novel/'+encodeURIComponent(w.id)+'">Chapter list</a><button class="reader-btn" id="next" '+(index===chapters.length-1?'disabled':'')+'>Next →</button></div>';
  const prev=document.getElementById('prev'),next=document.getElementById('next');
  if(index>0)prev.addEventListener('click',()=>location.hash='/read/'+encodeURIComponent(w.id)+'/'+encodeURIComponent(chapters[index-1].id));
  if(index<chapters.length-1)next.addEventListener('click',()=>location.hash='/read/'+encodeURIComponent(w.id)+'/'+encodeURIComponent(chapters[index+1].id));
