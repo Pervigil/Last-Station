@@ -33,10 +33,10 @@ Both projects are works in progress, so details and chapters may change as they 
 - Vercel for deployment
 
 
-# Project structure notes
+## Project structure notes
 
 Some publishing and reader data is managed through Supabase, rather than being stored only in the local content file.
 
-## Important Note
+# Important Note
 
 [This is a personal writing project built to give unfinished stories a place to live while they grow. It is not intended to be a polished, open publishing platform, and the content remains the author's original work] 
