@@ -6,7 +6,7 @@
 window.LAST_STATION = {
   siteTitle: "The Last Station",
   message: "Stories that take the long way home. A few unfinished worlds, kept here until they're ready.",
-  about: "Last Station is a personal archive for novels, fragments, and stories still finding their shape. Some pages are finished; most are still on their way.",
+  about: "This is a home for the stories I am working on, the ones that are finished, and the ones that are not ready to leave the notebook yet.\n\nMore works are sure to come. I'm at my last station and there's no train coming to pick me up anyways, so I'll just keep writing.\n\n-Demented Poet",
 
   works: [
     {
