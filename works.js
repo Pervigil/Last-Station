@@ -15,7 +15,7 @@ window.LAST_STATION = {
       type: "Wuxia · Xianxia",
       status: "In progress",
       description: "A life that ends. A world that carries on. The road back is never quite the same.",
-      longDescription: "I remember the taste of salt and how the world looked clouded by darkness back when I jumped off a bridge to end my life on Earth.
+      longDescription: `I remember the taste of salt and how the world looked clouded by darkness back when I jumped off a bridge to end my life on Earth.
 
 However, instead of dying, I opened my eyes in a world of martial artists, rumored immortals, and dreadful beasts. A  world that had no place for a man from the modern century.
 
@@ -25,14 +25,14 @@ But unfortunately, the will of a mortal cannot defy the heavens.
 
 In the end, I died with countless regrets.
 
-Then I woke up again.",
+Then I woke up again.`,
       chapters: [
         {
           id: "chapter-1",
           title: "Chapter 1 · Prologue",
           status: "Loaded",
           placeholder: true,
-          content: "Drip—
+          content: `Drip—
 
 Meoww!
 
@@ -74,14 +74,14 @@ I take a breath, the salty air stinging the back of my throat one last time. 
 
 Drop. 
 
-This was my last life."
+This was my last life.`
         },
         {
           id: "chapter-2",
           title: "Chapter 2 · The Dying Man",
           status: "Loaded",
           placeholder: false,
-          content: "Cough Cough-
+          content: `Cough Cough-
 
 I am dying.
 
@@ -257,14 +257,14 @@ My eyes were threatening to shut close.
 
 In the end, I lost the fight. My vision rapidly tunneling into darkness. 
 
-And my second death came with bitterness."
+And my second death came with bitterness.`
         },
         {
           id: "chapter-3",
           title: "Chapter 3 · First Record",
           status: "Loaded",
-          placeholder: True,
-          content: "Huff-! Hu-
+          placeholder: true,
+          content: `Huff-! Hu-
 
 Breathing doesn't carry painful stinging sensation anymore.
 
@@ -434,7 +434,7 @@ After walking for a few minutes, I stop at the narrow edge of the yard near the 
 
 A thin branch had fallen from the tree standing at the corner, grabbing a small rock laying nearby I sharpen the branch with it.
 
-Without much force I swing the sharpened branch--- (To Be Continued)"
+Without much force I swing the sharpened branch--- (To Be Continued)`
         }
       ]
     },
@@ -444,18 +444,18 @@ Without much force I swing the sharpened branch--- (To Be Continued)"
       type: "Literary · Slice of life",
       status: "In progress",
       description: "Unfinished manuscripts, missed trains, and the things people never quite say.",
-      longDescription: "I've spent countless nights sleepless, written numerous failed novels.
+      longDescription: `I've spent countless nights sleepless, written numerous failed novels.
 
 Chasing after concepts that I could barely understand.
 
-Today, I've finally discovered something that gives shape to my futile chase.",
+Today, I've finally discovered something that gives shape to my futile chase.`,
       chapters: [
         {
           id: "chapter-1",
           title: "Chapter 1 · Moonlight Reveries (Prologue)",
           status: "Loaded",
           placeholder: true,
-          content: "There are things in this world that aren't visible to us beneath the warmth of the sun.
+          content: `There are things in this world that aren't visible to us beneath the warmth of the sun.
 
 Things you could only notice once they are illuminated by moonlight.
 
@@ -477,14 +477,14 @@ That path is unique for you and me.
 
 And although they may intertwine at certain crossroads, they don't always have to meet at the end.
 
-I hope you can understand me."
+I hope you can understand me.`
         },
         {
           id: "chapter-2",
           title: "Chapter 2 · Title",
           status: "Loaded",
-          placeholder: False,
-          content: "<< These words were written for your eyes only, I hope you understand me. >>
+          placeholder: false,
+          content: `<< These words were written for your eyes only, I hope you understand me. >>
 
 Click-- Click-
 
@@ -604,7 +604,7 @@ A sense of drowsiness washes over me as I look at my phone. Trying to avoid the 
 
 '...I have school in four hours.'
 
-I should probably sleep."
+I should probably sleep.`
         }
       ]
     }
