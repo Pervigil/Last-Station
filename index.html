@@ -42,6 +42,7 @@ function loadPreferences(){try{return {...preferenceDefaults,...JSON.parse(local
 let preferences=loadPreferences();
 let settingsReturnRoute = '/';
 let settingsReturnScroll = 0;
+let settingsReturnPending = false;
 try {
  const savedReturn = JSON.parse(sessionStorage.getItem('last-station-settings-return') || 'null');
  if(savedReturn && typeof savedReturn.route === 'string' && savedReturn.route !== '/settings'){
@@ -218,15 +219,24 @@ function handleHashChange(event){
  let previousRoute='/';
  try{if(event.oldURL){const oldHash=event.oldURL.split('#')[1]||'/';previousRoute='/'+decodeURIComponent(oldHash).replace(/^\/+/, '');if(oldHash==='/'||oldHash==='')previousRoute='/';}}catch{}
  if(nextRoute==='/settings'&&previousRoute!=='/settings'){
-  settingsReturnRoute=previousRoute;
-  settingsReturnScroll=window.scrollY;
-  try{sessionStorage.setItem('last-station-settings-return',JSON.stringify({route:settingsReturnRoute,scroll:settingsReturnScroll}));}catch{}
+  if(!settingsReturnPending){
+   settingsReturnRoute=previousRoute;
+   settingsReturnScroll=window.scrollY;
+   try{sessionStorage.setItem('last-station-settings-return',JSON.stringify({route:settingsReturnRoute,scroll:settingsReturnScroll}));}catch{}
+  }
+  settingsReturnPending=false;
  }
  const returningFromSettings=previousRoute==='/settings'&&nextRoute===settingsReturnRoute;
  render();
  if(returningFromSettings)requestAnimationFrame(()=>window.scrollTo(0,settingsReturnScroll));
 }
 if(supabaseClient){supabaseClient.auth.onAuthStateChange((_event,session)=>{currentSession=session;setTimeout(async()=>{await refreshFromDatabase(false);if(route().startsWith("/account"))renderAccount();},0);});}
+document.querySelectorAll('a[href="#/settings"]').forEach(link=>link.addEventListener('click',()=>{
+ settingsReturnRoute=route();
+ settingsReturnScroll=window.scrollY;
+ settingsReturnPending=true;
+ try{sessionStorage.setItem('last-station-settings-return',JSON.stringify({route:settingsReturnRoute,scroll:settingsReturnScroll}));}catch{}
+}));
 window.addEventListener('hashchange',handleHashChange);render();refreshFromDatabase();
 })();
 </script>
