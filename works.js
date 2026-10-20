@@ -28,7 +28,7 @@ In the end, I died with countless regrets.
 Then I woke up again.",
       chapters: [
         {
-          id: "chapter 1",
+          id: "chapter-1",
           title: "Chapter 1 · Prologue",
           status: "Loaded",
           placeholder: true,
@@ -77,7 +77,7 @@ Drop.
 This was my last life."
         },
         {
-          id: "chapter 2",
+          id: "chapter-2",
           title: "Chapter 2 · The Dying Man",
           status: "Loaded",
           placeholder: false,
@@ -260,7 +260,7 @@ In the end, I lost the fight. My vision rapidly tunneling into darkness.
 And my second death came with bitterness."
         },
         {
-          id: "chapter 3",
+          id: "chapter-3",
           title: "Chapter 3 · First Record",
           status: "Loaded",
           placeholder: True,
@@ -451,7 +451,7 @@ Chasing after concepts that I could barely understand.
 Today, I've finally discovered something that gives shape to my futile chase.",
       chapters: [
         {
-          id: "chapter 1",
+          id: "chapter-1",
           title: "Chapter 1 · Moonlight Reveries (Prologue)",
           status: "Loaded",
           placeholder: true,
@@ -480,8 +480,8 @@ And although they may intertwine at certain crossroads, they don't always have t
 I hope you can understand me."
         },
         {
-          id: "chapter 2",
-          title: "Chapter 2 · Tile",
+          id: "chapter-2",
+          title: "Chapter 2 · Title",
           status: "Loaded",
           placeholder: False,
           content: "<< These words were written for your eyes only, I hope you understand me. >>
