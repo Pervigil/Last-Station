@@ -33,7 +33,7 @@ Both projects are works in progress, so details and chapters may change as they 
 - Vercel for deployment
 
 
-##Project structure notes
+# Project structure notes
 
 Some publishing and reader data is managed through Supabase, rather than being stored only in the local content file.
 
