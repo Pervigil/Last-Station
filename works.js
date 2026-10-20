@@ -1,52 +1,68 @@
 /*
-  LAST STATION — CONTENT CONFIGURATION
-  ------------------------------------
-  Edit this file to change the site text and add/remove works.
-  Keep category values exactly as: "novels", "short-fiction", or "notes".
-  No build tools or coding framework required.
+ LAST STATION — CONTENT
+ Edit the text here. The site layout lives in index.html.
+ Add real chapter prose to each chapter's content field when ready.
 */
 window.LAST_STATION = {
   siteTitle: "Last Station",
-  eyebrow: "A personal archive of fiction",
-  message: "For stories that take the long way home, unfinished thoughts, and the things that are easier to write down than to say aloud. The world can wait outside for a while.",
-  updatedNote: "Kept by lamplight",
-
-  aboutTitle: "A writer in transit.",
-  about: "Still learning how to turn the noise in my head into something worth keeping. Most of these pages are written between deadlines, late trains, and the hours when sleep refuses to cooperate.",
-
-  deskTitle: "Nothing here is in a hurry.",
-  deskNote: "Some stories arrive fully formed. Others sit quietly in a notebook for months, waiting for the right weather. This archive will grow when the words are ready.",
+  message: "Stories that take the long way home. A few unfinished worlds, kept here until they're ready.",
+  about: "Last Station is a personal archive for novels, fragments, and stories still finding their shape. Some pages are finished; most are still on their way.",
 
   works: [
     {
-      title: "The Immortal Path Must Perish",
-      category: "novels",
+      id: "mortal-records",
+      title: "Mortal Records of Endless Returns",
       type: "Wuxia · Xianxia",
       status: "In progress",
-      description: "A man wakes in a world that keeps asking him to survive, and begins to suspect survival was never the point.",
-      longDescription: "A long-form cultivation fantasy about a stranger in an unfamiliar world, the cost of becoming stronger, and the terrible distance between living forever and finding a reason to live.",
-      note: "A long road · Novel",
-      readingNote: "Currently in development. Chapters and a proper reading page can be added as the manuscript grows."
+      description: "A life that ends. A world that carries on. The road back is never quite the same.",
+      longDescription: "A cultivation fantasy about a stranger trapped in the long aftermath of his own endings, searching for a way forward in a world that was never made for him.",
+      chapters: [
+        {
+          id: "chapter-1",
+          title: "Chapter 1 · The Village",
+          status: "Placeholder",
+          placeholder: true,
+          content: "This is where Chapter One begins.\n\nReplace this paragraph with the opening of your novel. You can keep the chapter title, change its status, and add as many paragraphs as you need.\n\nThe reader is already set up: chapter navigation, previous and next buttons, and a dedicated reading layout are ready for the real manuscript."
+        },
+        {
+          id: "chapter-2",
+          title: "Chapter 2 · A Stranger's Book",
+          status: "Placeholder",
+          placeholder: true,
+          content: "This is a placeholder for Chapter Two.\n\nAdd the chapter text in the content field. Separate paragraphs with a blank line, and the reader will format them automatically."
+        },
+        {
+          id: "chapter-3",
+          title: "Chapter 3 · The First Record",
+          status: "Planned",
+          placeholder: true,
+          content: "This is a placeholder for Chapter Three.\n\nUse this entry as a template when adding the next chapter. Give each chapter a unique id, a title, a status, and its content."
+        }
+      ]
     },
     {
+      id: "where-moonlight-falls",
       title: "Where Moonlight Falls",
-      category: "novels",
       type: "Literary · Slice of life",
       status: "In progress",
-      description: "A quiet story about unfinished manuscripts, missed trains, and the feelings people never quite manage to name.",
-      longDescription: "A slower, more intimate story of ordinary days and the delicate distance between what people feel, what they say, and what they can bring themselves to admit.",
-      note: "After the last bell · Novel",
-      readingNote: "A work in progress. This entry is a place-holder for the story and its future chapters."
-    },
-    {
-      title: "Loose Pages",
-      category: "notes",
-      type: "Notes · Fragments",
-      status: "Open notebook",
-      description: "Lines without homes yet. Small scenes, stray thoughts, and the beginnings of stories that may or may not arrive.",
-      longDescription: "A drawer for fragments that do not belong anywhere else yet: scraps of dialogue, images, observations, and sentences waiting for their story to find them.",
-      note: "Collected in passing · Ongoing",
-      readingNote: "This notebook is intentionally unfinished. More fragments can be added here over time."
+      description: "Unfinished manuscripts, missed trains, and the things people never quite say.",
+      longDescription: "A quieter story about ordinary days, fragile connections, and the distance between what people feel and what they can bring themselves to admit.",
+      chapters: [
+        {
+          id: "chapter-1",
+          title: "Chapter 1 · Moonlight Reveries",
+          status: "Placeholder",
+          placeholder: true,
+          content: "This is where Chapter One of Where Moonlight Falls will go.\n\nReplace this text with the prologue or first chapter when you're ready. This page is deliberately plain, giving the prose room to breathe."
+        },
+        {
+          id: "chapter-2",
+          title: "Chapter 2 · If We Run Away",
+          status: "Placeholder",
+          placeholder: true,
+          content: "This is a placeholder for Chapter Two.\n\nAdd your draft to the content field in works.js. The chapter list and reader will update automatically."
+        }
+      ]
     }
   ]
 };
