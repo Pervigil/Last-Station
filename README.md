@@ -1,35 +1,35 @@
 # Last Station
 
-A minimal, dark, winter-toned home for novels, short fiction, notes, and fragments.
+A minimalist, dark-themed home for your novels, with a working chapter list and reading interface.
 
 ## Files
 
-- `index.html` — layout, styling, responsive design, filters, search, and work-detail modal.
-- `works.js` — edit this to update the site message, author note, desk note, and list of works.
+- `index.html` — design, novel list, search, novel detail pages, reader layout, and chapter navigation.
+- `works.js` — all content: descriptions, novel titles, chapter titles, statuses, and chapter text.
 
-## Add or edit a work
+## Add a novel
 
-Open `works.js` and add an object to the `works` array:
+Add an object to `works` in `works.js`. Give it a unique `id`, a title, a type, a status, a short description, a longer description, and a `chapters` array. Use lowercase ids with hyphens.
+
+## Add a chapter
+
+Add an object to that novel's `chapters` array:
 
 ```js
 {
-  title: "Your title",
-  category: "short-fiction", // "novels", "short-fiction", or "notes"
-  type: "Short fiction",
-  status: "Complete",
-  description: "A short description shown on the card.",
-  longDescription: "A longer description shown when someone opens the card.",
-  note: "A small label shown at the bottom of the card.",
-  readingNote: "A note about reading status or where chapters will appear."
+  id: "chapter-4",
+  title: "Chapter 4 · Your Chapter Title",
+  status: "Draft",
+  placeholder: false,
+  content: "First paragraph.\\n\\nSecond paragraph."
 }
 ```
 
-Keep commas between objects. Save and commit your changes to the GitHub default branch; Vercel will redeploy after the repository is connected.
+- Each chapter id must be unique within its novel.
+- Separate paragraphs using `\\n\\n`.
+- Set `placeholder: false` when the text is real.
+- The reader creates chapter URLs from the novel and chapter ids, and Previous / Next navigation follows the order in the array.
 
-## Publish chapters later
+## Publish
 
-This version is a responsive front-end catalogue. It does not yet include a login, chapter editor, database, or full reader. A later version can add individual chapter pages or a content system without rebuilding the visual design from scratch.
-
-## Local preview
-
-Open `index.html` in a browser. It loads `works.js` from the same folder.
+Commit your changes to the GitHub `main` branch. Once Vercel is connected to this repository, it should deploy automatically. No build command is needed for this plain HTML/CSS/JavaScript site.
