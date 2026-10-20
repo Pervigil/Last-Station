@@ -2,7 +2,7 @@
 
 **A home for stories still on their way.**
 
-Last Station is a minimalist, independent reading site for original fiction, works in progress, and the occasional story that is still finding its shape.
+Last Station is a minimalist, independent reading site for original fiction, works in progress written by me. 
 
 **Live site:** https://last-station.vercel.app/
 
@@ -14,16 +14,17 @@ The site currently features:
 - Dedicated novel pages and chapter-by-chapter reading
 - Reader accounts and reading-progress tracking
 - Adjustable reading themes, fonts, text size, and line spacing
-- A small author interface for managing published work
+- A small user interface for tracking reading progress and user security. 
 
-The design is intentionally quiet: the stories should take up more space than the interface around them.
+The design is intentionally simpple, so the stories can take up more space than the interface around them.
 
 ## Stories
 
-- **Mortal Records of Endless Returns** — a wuxia/xianxia story about a life that ends, a world that carries on, and the uncertain road back.
-- **Where Moonlight Falls** — a quieter slice-of-life project about distance, unfinished words, and the things people struggle to say.
+- **Mortal Records of Endless Returns** — a wuxia/xianxia story about a mortal's never-ending journey till he reaches the end of heaven. 
 
-Both projects are works in progress, so details and chapters may change as they develop.
+- **Where Moonlight Falls** — a slice-of-life project about distance, unfinished words, and the things people struggle to express. 
+
+Both projects are works in progress, so details and chapters may change as they develop. More works will be added in the far future. 
 
 ## Built with
 
@@ -31,15 +32,11 @@ Both projects are works in progress, so details and chapters may change as they 
 - Supabase for authentication and data
 - Vercel for deployment
 
-The site is intentionally lightweight and does not require a frontend build step.
 
-## Project structure
-
-- `index.html` — page layout, styling, navigation, reader, settings, and account interface.
-- `works.js` — story metadata and the local manuscript/content configuration.
+# Project structure notes
 
 Some publishing and reader data is managed through Supabase, rather than being stored only in the local content file.
 
-## Note
+## Important Note
 
-This is a personal writing project built to give unfinished stories a place to live while they grow. It is not intended to be a polished, open publishing platform, and the content remains the author's original work.
+[This is a personal writing project built to give unfinished stories a place to live while they grow. It is not intended to be a polished, open publishing platform, and the content remains the author's original work] 
