@@ -252,6 +252,14 @@ body[data-theme="slate"]{color-scheme:dark;--bg:#17191d;--surface:#202329;--text
 }
 /* Vercel Web Analytics for this static HTML site */
 
+
+/* Position the monogram in the visual center of the left header area. */
+@media (min-width:851px){
+ .logo{transform:translateX(clamp(24px,6vw,44px))}
+}
+@media (max-width:850px){
+ .logo{transform:translateX(clamp(20px,6vw,32px))}
+}
 </style>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -518,9 +526,3 @@ window.addEventListener('hashchange',handleHashChange);render();refreshFromDatab
 </script>
 </body>
 </html>
-
-/* Center the desktop monogram in the space before the navigation.
-   Leave the mobile header exactly as it is. */
-@media (min-width:851px){
- .logo{transform:translateX(clamp(36px,6vw,88px))}
-}
