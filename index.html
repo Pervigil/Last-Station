@@ -5,13 +5,15 @@
 <meta name="theme-color" content="#111111"><meta name="description" content="Last Station. A personal archive of my novels and stories.">
 <title>Last Station</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Literata:opsz,wght@7..72,400..500&family=Lora:wght@400..500&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500&family=Literata:opsz,wght@7..72,400..500&family=Lora:wght@400..500&family=Merriweather:wght@400;700&family=Source+Serif+4:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:dark;--bg:#111;--surface:#171717;--text:#e9e7e2;--muted:#93918b;--dim:#66645f;--line:#30302d;--accent:#c5c0b4;--serif:"Literata",Georgia,serif;--sans:"DM Sans",Arial,sans-serif;--mono:"DM Mono",monospace;--reading-font:"Literata",Georgia,serif;--reading-size:17px;--reading-line-height:2}
 body[data-theme="light"]{color-scheme:light;--bg:#faf9f6;--surface:#fff;--text:#25241f;--muted:#6f6c64;--dim:#8b887f;--line:#dedbd3;--accent:#4f4b43}
 body[data-theme="pale"]{color-scheme:light;--bg:#f0f3ee;--surface:#f9fbf7;--text:#29332d;--muted:#68756b;--dim:#89948a;--line:#d4ddd3;--accent:#496453}
 body[data-theme="sepia"]{color-scheme:light;--bg:#f2e8d5;--surface:#f8f0e2;--text:#433426;--muted:#7c6955;--dim:#9b876f;--line:#d9c9b1;--accent:#785c3e}
 body[data-theme="midnight"]{color-scheme:dark;--bg:#101827;--surface:#172235;--text:#e2e8f0;--muted:#9aa8bd;--dim:#718097;--line:#2b3a50;--accent:#b9cbe5}
+body[data-theme="forest"]{color-scheme:dark;--bg:#111a17;--surface:#18231e;--text:#e3e9e1;--muted:#9aa99d;--dim:#687a6e;--line:#2c3b31;--accent:#b8d0b7}
+body[data-theme="slate"]{color-scheme:dark;--bg:#17191d;--surface:#202329;--text:#e6e7e9;--muted:#a0a5ae;--dim:#707782;--line:#353941;--accent:#c3cbd8}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.7 var(--sans);min-height:100vh}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{color:inherit}.wrap{width:min(1120px,calc(100% - 64px));margin:0 auto}.header{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.logo{font:500 18px var(--serif);letter-spacing:-.03em}.nav{display:flex;gap:24px;color:var(--muted);font-size:12px}.nav a:hover,.text-link:hover{color:var(--text)}.page{padding:60px 0 90px}.kicker{font:10px var(--mono);text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}h1,h2,h3,p{margin-top:0}h1{font:400 clamp(42px,7vw,66px)/1.1 var(--serif);letter-spacing:-.055em;margin:16px 0 15px}h2{font:400 28px/1.3 var(--serif);letter-spacing:-.035em;margin-bottom:8px}.intro{color:var(--muted);max-width:480px;margin-bottom:40px}.home-layout{display:grid;grid-template-columns:minmax(260px,.85fr) minmax(0,1.15fr);gap:clamp(36px,7vw,100px);align-items:start}.home-hero{position:sticky;top:36px}.home-hero h1{max-width:430px}.home-library{min-width:0}.home-library .search{margin-top:4px}.search{width:100%;padding:12px 0;background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;color:var(--text);outline:none;font-size:13px;margin-bottom:34px}.search:focus{border-color:#888}.search::placeholder{color:var(--dim)}.section-label{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:0;color:var(--muted);font:10px var(--mono);letter-spacing:.1em;text-transform:uppercase}.series-list{display:flex;flex-direction:column}.series{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:14px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);transition:padding .18s;cursor:pointer}.series:hover{padding-left:6px;padding-right:6px}.series-number{color:var(--dim);font:11px var(--mono)}.series-title{font:400 21px/1.35 var(--serif);margin:0 0 5px}.series-sub{color:var(--muted);font-size:12px}.series-meta{text-align:right;color:var(--muted);font:10px/1.8 var(--mono)}.series-status{color:var(--accent);font-weight:500}.arrow{font-size:17px;color:var(--dim);margin-left:12px}.series:hover .arrow{color:var(--text)}.empty{padding:28px 0;color:var(--muted)}.foot{border-top:1px solid var(--line);padding:20px 0 28px;display:flex;justify-content:space-between;color:var(--dim);font:10px var(--mono);letter-spacing:.03em}
 .breadcrumb{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:12px;margin-bottom:40px}.breadcrumb a:hover{color:var(--text)}.detail-head{padding-bottom:28px;border-bottom:1px solid var(--line);margin-bottom:30px}.detail-head h1{font-size:clamp(38px,6vw,56px);max-width:680px}.detail-description{color:var(--muted);max-width:590px;margin:18px 0 20px}.detail-tags{display:flex;gap:18px;flex-wrap:wrap;color:var(--dim);font:10px var(--mono);text-transform:uppercase;letter-spacing:.08em}.detail-tag-primary{color:var(--accent);font-weight:500}.chapter-heading{font:10px var(--mono);text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:8px}.chapter-list{border-top:1px solid var(--line)}.chapter{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);cursor:pointer}.chapter:hover .chapter-name{color:#fff}.chapter-name{font-size:13px}.chapter-sub{color:var(--dim);font:10px var(--mono)}.chapter-arrow{color:var(--dim)}
 .reader-top{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-bottom:18px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted);max-width:820px;margin-left:auto;margin-right:auto}.reader-title{font:400 clamp(32px,5vw,46px)/1.25 var(--serif);letter-spacing:-.035em;margin:42px 0 8px}.reader-chapter{font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:42px}.reader-title,.reader-end{max-width:820px;margin-left:auto;margin-right:auto}.prose{max-width:680px;margin:0 auto;font-family:var(--reading-font)!important;font-size:var(--reading-size);line-height:var(--reading-line-height);font-weight:400;color:var(--text);white-space:pre-line}.prose p{font-family:inherit!important}.font-preview{max-width:560px;margin-top:18px;padding:16px 18px;border-left:2px solid var(--accent);background:var(--surface);font-family:var(--reading-font)!important;font-size:var(--reading-size);line-height:var(--reading-line-height);color:var(--text)}.prose p{margin-bottom:1.6em}.placeholder{border-left:2px solid #5b5a54;padding:12px 18px;margin:30px 0;color:var(--muted);font:12px/1.8 var(--sans)}.settings-panel{max-width:650px}.settings-group{padding:22px 0;border-bottom:1px solid var(--line)}.settings-group h2{font-size:21px;margin-bottom:7px}.settings-help{color:var(--muted);font-size:12px;margin-bottom:16px}.settings-control{display:grid;gap:8px;max-width:420px}.settings-control label{font-size:12px;color:var(--muted)}.settings-control select,.settings-control input{width:100%;padding:11px 12px;background:var(--surface);border:1px solid var(--line);color:var(--text);border-radius:2px}.theme-options{display:flex;gap:8px;flex-wrap:wrap}.theme-choice{border:1px solid var(--line);background:var(--surface);color:var(--text);padding:9px 12px;cursor:pointer;font-size:12px}.theme-choice[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}.settings-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.reader-controls{display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--line);margin-top:60px;padding-top:20px;max-width:820px;margin-left:auto;margin-right:auto}.reader-btn{background:transparent;border:1px solid var(--line);padding:10px 14px;font-size:12px;cursor:pointer}.reader-btn:hover:not(:disabled){border-color:#777}.reader-btn:disabled{opacity:.3;cursor:not-allowed}.reader-end{text-align:center;margin:38px 0;color:var(--dim);font:10px var(--mono);letter-spacing:.12em}
@@ -19,6 +21,40 @@ body[data-theme="midnight"]{color-scheme:dark;--bg:#101827;--surface:#172235;--t
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
 .account-panel{max-width:650px}.account-form{display:grid;gap:16px}.account-form label{display:grid;gap:7px;color:var(--muted);font-size:12px}.account-form input,.account-form select,.account-form textarea{width:100%;border:1px solid var(--line);background:var(--surface);color:var(--text);padding:11px 12px;border-radius:2px;outline:none}.account-form textarea{resize:vertical;font:14px/1.8 var(--serif)}.account-form input:focus,.account-form select:focus,.account-form textarea:focus{border-color:#888}.form-actions,.account-status{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.form-note{color:var(--muted);font-size:11px;line-height:1.7}.form-grid{display:grid;grid-template-columns:1fr 2fr;gap:12px}.check-label{display:flex!important;grid-template-columns:auto 1fr;align-items:center;justify-content:start;gap:10px!important}.check-label input{width:auto}.account-section{margin-top:38px;padding-top:24px;border-top:1px solid var(--line)}.account-status{justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px}.progress-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}.progress-row strong{font-weight:500}.progress-percent{font:11px var(--mono);color:var(--muted)}
+
+
+/* Quiet visual details and the expanded author workspace */
+.featured-work{display:flex;flex-direction:column;gap:14px;padding:20px 0 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:34px;max-width:440px;transition:border-color .2s ease}
+.featured-work:hover{border-color:var(--accent)}
+.featured-topline,.featured-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.featured-mark{width:35px;height:35px;color:var(--accent);opacity:.9}
+.featured-title{font:400 23px/1.3 var(--serif);letter-spacing:-.025em;max-width:360px}
+.featured-description{font-size:12px;color:var(--muted);max-width:360px}
+.featured-bottom{font:10px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.featured-open{color:var(--text)}
+.status-dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);vertical-align:middle;margin-right:7px}
+.detail-tag{font:10px var(--mono);color:var(--muted);padding:6px 9px;border:1px solid var(--line)}
+.chapter-heading-mark{display:inline-flex;width:18px;height:18px;vertical-align:middle;margin-right:7px;color:var(--muted)}
+.chapter-heading-mark svg{width:100%;height:100%}
+.reader-progress-track{height:2px;position:fixed;z-index:20;top:0;left:0;right:0;background:transparent;pointer-events:none}
+#reader-progress-fill{display:block;height:100%;width:0;background:var(--accent);opacity:.8;transition:width .12s linear}
+.reader-heading-rule{display:flex;justify-content:center;margin:24px 0 4px;color:var(--dim)}
+.reader-heading-rule svg{width:44px;height:12px}
+.reader-title{max-width:680px;margin-left:auto;margin-right:auto;text-align:center}
+.author-note{max-width:680px;margin:58px auto 0;padding:22px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted);font:14px/1.8 var(--serif)}
+.author-note .kicker{margin-bottom:14px}
+.author-note p:last-child{margin-bottom:0}
+.reader-end{display:flex;flex-direction:column;align-items:center;gap:8px}
+.reader-end svg{width:44px;height:12px;color:var(--dim)}
+.chapter-preview{margin-top:26px;padding:24px;border:1px solid var(--line);background:var(--surface)}
+.chapter-preview[hidden]{display:none}
+.preview-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+.preview-toolbar .text-link{background:none;border:0;cursor:pointer;font-size:12px}
+.chapter-preview .reader-title{text-align:left;font-size:34px;margin:18px 0 24px}
+.chapter-preview .prose{max-width:680px;margin:0 auto}
+.account-form .account-form{margin-top:20px}
+@media(max-width:850px){.featured-work{max-width:none;margin-top:26px}.reader-heading-rule{margin-top:18px}.chapter-preview{padding:18px}}
+@media(max-width:600px){.featured-title{font-size:21px}.featured-work{padding:17px 0 19px}.author-note{padding:18px 0;margin-top:42px}.chapter-preview{padding:14px}.chapter-preview .reader-title{font-size:29px}}
 
 /* Responsive refinement: preserve the original mobile rhythm */
 @media (min-width: 851px) {
@@ -82,7 +118,7 @@ try {
   settingsReturnScroll = Number(savedReturn.scroll) || 0;
  }
 } catch {}
-const fontChoices={literata:{label:"Literata (literary serif)",value:'"Literata", Georgia, serif'},lora:{label:"Lora (classic book serif)",value:'"Lora", Georgia, serif'},merriweather:{label:"Merriweather (clear serif)",value:'"Merriweather", Georgia, serif'},sans:{label:"DM Sans (clean sans-serif)",value:'"DM Sans", Arial, sans-serif'},georgia:{label:"Georgia (system serif)",value:"Georgia, serif"},system:{label:"System default",value:"system-ui, sans-serif"}};
+const fontChoices={literata:{label:"Literata · literary serif",value:'"Literata", Georgia, serif'},lora:{label:"Lora · classic book serif",value:'"Lora", Georgia, serif'},source:{label:"Source Serif 4 · balanced serif",value:'"Source Serif 4", Georgia, serif'},ibm:{label:"IBM Plex Serif · modern serif",value:'"IBM Plex Serif", Georgia, serif'},merriweather:{label:"Merriweather · clear serif",value:'"Merriweather", Georgia, serif'},sans:{label:"DM Sans · clean sans-serif",value:'"DM Sans", Arial, sans-serif'},georgia:{label:"Georgia · system serif",value:"Georgia, serif"},system:{label:"System default",value:"system-ui, sans-serif"}};
 function applyPreferences(){
  const selectedFont=fontChoices[preferences.font]||fontChoices.literata;
  document.body.dataset.theme=preferences.theme;
@@ -101,16 +137,19 @@ let readerProgressHandler = null;
 function crumb(label){return '<div class="breadcrumb"><a href="#/">Works</a><span>/</span><span>'+esc(label)+'</span></div>'}
 function renderHome(){
  document.title='Last Station';
- app.innerHTML='<div class="home-layout"><section class="home-hero"><div class="kicker">A personal archive</div><h1>Last Station</h1><p class="intro">'+esc(config.message || 'Stories, notes, and things still being written.')+'</p></section><section class="home-library"><input class="search" id="search" type="search" placeholder="Search stories…" aria-label="Search stories"><div class="section-label"><span>Collected works</span><span id="count"></span></div><div class="series-list" id="series-list"></div></section></div>';
+ const featured=allWorks.find(w=>w.id==='mortal-records');
+ const bookMark='<svg class="featured-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M7 10.5c6-2.5 12-1.7 17 2.1v26c-5-3.8-11-4.6-17-2.1zM41 10.5c-6-2.5-12-1.7-17 2.1v26c5-3.8 11-4.6 17-2.1z" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M24 12.6v26" stroke="currentColor" stroke-width="1.3"/></svg>';
+ app.innerHTML='<div class="home-layout"><section class="home-hero"><div class="kicker">A personal archive</div><h1>Last Station</h1><p class="intro">'+esc(config.message || 'Stories, notes, and things still being written.')+'</p>'+(featured?'<a class="featured-work" href="#/novel/'+encodeURIComponent(featured.id)+'"><span class="featured-topline"><span class="kicker">Featured work</span>'+bookMark+'</span><span class="featured-title">'+esc(featured.title)+'</span><span class="featured-description">'+esc(featured.description||'')+'</span><span class="featured-bottom"><span class="series-status">'+esc(featured.status||'In progress')+'</span><span class="featured-open">Open work ↗</span></span></a>':'')+'</section><section class="home-library"><input class="search" id="search" type="search" placeholder="Search stories…" aria-label="Search stories"><div class="section-label"><span>Collected works</span><span id="count"></span></div><div class="series-list" id="series-list"></div></section></div>';
  const search=document.getElementById('search'),list=document.getElementById('series-list'),count=document.getElementById('count');
- function paint(){const q=search.value.trim().toLowerCase();const filtered=allWorks.filter(w=>[w.title,w.type,w.description].some(v=>String(v||'').toLowerCase().includes(q)));count.textContent=String(filtered.length).padStart(2,'0');list.innerHTML=filtered.length?filtered.map((w,i)=>'<a class="series" href="#/novel/'+encodeURIComponent(w.id)+'"><span class="series-number">'+String(i+1).padStart(2,'0')+'</span><span><h2 class="series-title">'+esc(w.title)+'</h2><span class="series-sub">'+esc(w.type||'Novel')+' · '+esc(w.description||'')+'</span></span><span class="series-meta"><span class="series-status">'+esc(w.status||'In progress')+'</span><span class="arrow"> ↗</span></span></a>').join(''):'<div class="empty">No stories found.</div>'}
+ function paint(){const q=search.value.trim().toLowerCase();const filtered=allWorks.filter(w=>[w.title,w.type,w.description,w.status].some(v=>String(v||'').toLowerCase().includes(q)));count.textContent=String(filtered.length).padStart(2,'0');list.innerHTML=filtered.length?filtered.map((w,i)=>'<a class="series" href="#/novel/'+encodeURIComponent(w.id)+'"><span class="series-number">'+String(i+1).padStart(2,'0')+'</span><span><h2 class="series-title">'+esc(w.title)+'</h2><span class="series-sub">'+esc(w.type||'Novel')+' · '+esc(w.description||'')+'</span></span><span class="series-meta"><span class="series-status">'+esc(w.status||'In progress')+'</span><span class="arrow"> ↗</span></span></a>').join(''):'<div class="empty">No stories found.</div>'}
  search.addEventListener('input',paint);paint();
 }
 function renderNovel(id){
  const w=allWorks.find(x=>x.id===id);if(!w){renderHome();return}
  document.title=w.title+' — Last Station';
  const chapters=w.chapters||[];
- app.innerHTML=crumb(w.title)+'<section class="detail-head"><div class="kicker">'+esc(w.type||'Novel')+'</div><h1>'+esc(w.title)+'</h1><p class="detail-description">'+esc(w.longDescription||w.description||'')+'</p><div class="detail-tags"><span class="detail-tag-primary">'+esc(w.status||'In progress')+'</span><span class="detail-tag-primary">'+chapters.length+' chapters planned</span></div></section><div class="chapter-heading">Chapters <span style="float:right">'+String(chapters.length).padStart(2,'0')+'</span></div><div class="chapter-list">'+(chapters.length?chapters.map((c,i)=>'<a class="chapter" href="#/read/'+encodeURIComponent(w.id)+'/'+encodeURIComponent(c.id)+'"><span><span class="chapter-name">'+esc(c.title)+'</span><br><span class="chapter-sub">'+esc(c.status||'Not yet published')+'</span></span><span class="chapter-arrow">↗</span></a>').join(''):'<p class="empty">Chapters will appear here.</p>')+'</div>';
+ const updated=w.lastActivity?new Date(w.lastActivity).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}):'';
+ app.innerHTML=crumb(w.title)+'<section class="detail-head"><div class="kicker">'+esc(w.type||'Novel')+'</div><h1>'+esc(w.title)+'</h1><p class="detail-description">'+esc(w.longDescription||w.description||'')+'</p><div class="detail-tags"><span class="detail-tag-primary"><span class="status-dot" aria-hidden="true"></span>'+esc(w.status||'In progress')+'</span><span class="detail-tag">'+chapters.length+' available chapters</span>'+(updated?'<span class="detail-tag">Updated '+esc(updated)+'</span>':'')+'</div></section><div class="chapter-heading"><span class="chapter-heading-mark" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M3 4.5h14M3 10h10M3 15.5h7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>Chapters <span style="float:right">'+String(chapters.length).padStart(2,'0')+'</span></div><div class="chapter-list">'+(chapters.length?chapters.map((c,i)=>'<a class="chapter" href="#/read/'+encodeURIComponent(w.id)+'/'+encodeURIComponent(c.id)+'"><span><span class="chapter-name">'+esc(c.title)+'</span><br><span class="chapter-sub">'+esc(c.status||'Not yet published')+'</span></span><span class="chapter-arrow">↗</span></a>').join(''):'<p class="empty">Chapters will appear here.</p>')+'</div>';
 }
 function renderReader(id,chapterId){
  const w=allWorks.find(x=>x.id===id);if(!w){renderHome();return}
@@ -118,10 +157,13 @@ function renderReader(id,chapterId){
  const c=chapters[index];if(!c){renderNovel(id);return}
  document.title=c.title+' — '+w.title;
  const content=c.content||'This chapter is a placeholder. Replace this text with your manuscript when it is ready.';
- app.innerHTML='<div class="reader-top"><a href="#/novel/'+encodeURIComponent(w.id)+'">← '+esc(w.title)+'</a><span>'+String(index+1).padStart(2,'0')+' / '+String(chapters.length).padStart(2,'0')+'</span></div><article><h1 class="reader-title">'+esc(formatChapterTitle(c.title))+'</h1><div class="prose">'+content.split(/\n\s*\n/).map(p=>'<p>'+esc(p)+'</p>').join('')+'</div>'+(c.placeholder?'<div class="placeholder">PLACEHOLDER TEXT · Replace the chapter content in <code>works.js</code>. The reading layout and chapter navigation are already wired up.</div>':'')+'<div class="reader-end">— END OF CHAPTER —</div></article><div class="reader-controls"><button class="reader-btn" id="prev" '+(index===0?'disabled':'')+'>← Previous</button><a class="reader-btn" href="#/novel/'+encodeURIComponent(w.id)+'">Chapter list</a><button class="reader-btn" id="next" '+(index===chapters.length-1?'disabled':'')+'>Next →</button></div>';
+ app.innerHTML='<div id="reader-progress-track" class="reader-progress-track" aria-hidden="true"><span id="reader-progress-fill"></span></div><div class="reader-top"><a href="#/novel/'+encodeURIComponent(w.id)+'">← '+esc(w.title)+'</a><span>'+String(index+1).padStart(2,'0')+' / '+String(chapters.length).padStart(2,'0')+'</span></div><article><div class="reader-heading-rule" aria-hidden="true"><svg viewBox="0 0 44 12"><path d="M1 6h15m12 0h15M19 6l3-3 3 3-3 3z" fill="none" stroke="currentColor" stroke-width="1"/></svg></div><h1 class="reader-title">'+esc(formatChapterTitle(c.title))+'</h1><div class="prose">'+content.split(/\n\s*\n/).map(p=>'<p>'+esc(p)+'</p>').join('')+'</div>'+(c.authorNote?'<aside class="author-note"><div class="kicker">A note from the author</div>'+String(c.authorNote).split(/\n\s*\n/).map(p=>'<p>'+esc(p)+'</p>').join('')+'</aside>':'')+(c.placeholder?'<div class="placeholder">PLACEHOLDER TEXT · Replace the chapter content in <code>works.js</code>. The reading layout and chapter navigation are already wired up.</div>':'')+'<div class="reader-end"><svg viewBox="0 0 44 12" aria-hidden="true"><path d="M1 6h15m12 0h15M19 6l3-3 3 3-3 3z" fill="none" stroke="currentColor" stroke-width="1"/></svg><span>END OF CHAPTER</span></div></article><div class="reader-controls"><button class="reader-btn" id="prev" '+(index===0?'disabled':'')+'>← Previous</button><a class="reader-btn" href="#/novel/'+encodeURIComponent(w.id)+'">Chapter list</a><button class="reader-btn" id="next" '+(index===chapters.length-1?'disabled':'')+'>Next →</button></div>';
  const prev=document.getElementById('prev'),next=document.getElementById('next');
  if(index>0)prev.addEventListener('click',()=>location.hash='/read/'+encodeURIComponent(w.id)+'/'+encodeURIComponent(chapters[index-1].id));
  if(index<chapters.length-1)next.addEventListener('click',()=>location.hash='/read/'+encodeURIComponent(w.id)+'/'+encodeURIComponent(chapters[index+1].id));
+ const progressFill=document.getElementById('reader-progress-fill');
+ const updateVisualProgress=()=>{const max=document.documentElement.scrollHeight-window.innerHeight;const percent=max>0?Math.max(0,Math.min(100,(window.scrollY/max)*100)):0;if(progressFill)progressFill.style.width=percent+'%';};
+ window.addEventListener('scroll',updateVisualProgress,{passive:true});updateVisualProgress();
  trackReaderProgress(w,c);
 }
 
@@ -141,10 +183,11 @@ async function refreshFromDatabase(shouldRender=true){
   if(chaptersResult.error) throw chaptersResult.error;
   const chaptersByNovel={};
   (chaptersResult.data||[]).forEach(ch=>{
+   if(!currentUserIsAdmin&&!ch.is_published) return;
    if(!chaptersByNovel[ch.novel_id]) chaptersByNovel[ch.novel_id]=[];
-   chaptersByNovel[ch.novel_id].push({id:ch.slug, databaseId:ch.id, title:ch.title, status:ch.status, placeholder:false, content:ch.body, chapterNumber:ch.chapter_number, isPublished:ch.is_published});
+   chaptersByNovel[ch.novel_id].push({id:ch.slug, databaseId:ch.id, title:ch.title, status:ch.status, placeholder:false, content:ch.body, authorNote:ch.author_note||'', chapterNumber:ch.chapter_number, isPublished:ch.is_published, updatedAt:ch.updated_at});
   });
-  allWorks=(novelsResult.data||[]).map(n=>({id:n.id,title:n.title,type:n.genre,status:n.status,description:n.description,longDescription:n.long_description,chapters:chaptersByNovel[n.id]||[]}));
+  allWorks=(novelsResult.data||[]).filter(n=>currentUserIsAdmin||n.is_published).map(n=>{const chapters=chaptersByNovel[n.id]||[];const activity=[n.updated_at,...chapters.map(ch=>ch.updatedAt)].filter(Boolean).sort().pop();return {id:n.id,title:n.title,type:n.genre,status:n.status,description:n.description,longDescription:n.long_description,updatedAt:n.updated_at,lastActivity:activity,chapters};});
   if(shouldRender) render();
  }catch(error){console.error("Supabase loading failed:",error);}
 }
@@ -178,15 +221,10 @@ async function renderAccount(){
   const form=document.getElementById("auth-form");
   form.addEventListener("submit",async event=>{
    event.preventDefault();
-   const button=event.submitter;
-   const mode=button&&button.value==="signup"?"signup":"signin";
-   const email=form.elements.email.value.trim();
-   const password=form.elements.password.value;
-   const message=document.getElementById("auth-message");
+   const button=event.submitter,mode=button&&button.value==="signup"?"signup":"signin";
+   const email=form.elements.email.value.trim(),password=form.elements.password.value,message=document.getElementById("auth-message");
    message.textContent=mode==="signup"?"Creating account…":"Signing in…";
-   let result;
-   if(mode==="signup") result=await supabaseClient.auth.signUp({email,password,options:{emailRedirectTo:location.origin+location.pathname+"#/account"}});
-   else result=await supabaseClient.auth.signInWithPassword({email,password});
+   const result=mode==="signup"?await supabaseClient.auth.signUp({email,password,options:{emailRedirectTo:location.origin+location.pathname+"#/account"}}):await supabaseClient.auth.signInWithPassword({email,password});
    if(result.error){message.textContent=result.error.message;return;}
    if(mode==="signup"&&!result.data.session){message.textContent="Account created. Check your email to confirm it, then sign in.";}
    else{message.textContent="Signed in. Loading your account…";await refreshFromDatabase(false);renderAccount();}
@@ -198,36 +236,50 @@ async function renderAccount(){
  const progressResult=await supabaseClient.from("reader_progress").select("*").eq("user_id",session.user.id).order("updated_at",{ascending:false});
  const progress=progressResult.data||[];
  const progressHtml=progress.length?progress.map(p=>{
-  const w=allWorks.find(item=>item.id===p.novel_id);
-  const ch=w&&(w.chapters||[]).find(item=>item.databaseId===p.chapter_id);
+  const w=allWorks.find(item=>item.id===p.novel_id),ch=w&&(w.chapters||[]).find(item=>item.databaseId===p.chapter_id);
   return '<a class="progress-row" href="#/read/'+encodeURIComponent(p.novel_id)+'/'+encodeURIComponent(ch?ch.id:"chapter-1")+'"><span><strong>'+esc(w?w.title:p.novel_id)+'</strong><br><span class="form-note">'+esc(ch?ch.title:"Last read chapter")+'</span></span><span class="progress-percent">'+p.scroll_percent+'%</span></a>';
  }).join(""):'<p class="form-note">Your reading progress will appear here after you read a chapter while signed in.</p>';
- panel.innerHTML='<div class="account-status"><p>Signed in as <strong>'+esc(session.user.email||"reader")+'</strong></p><button id="signout" class="reader-btn" type="button">Sign out</button></div><section class="account-section"><div class="chapter-heading">Reading progress</div>'+progressHtml+'</section>'+(currentUserIsAdmin?'<section class="account-section"><div class="kicker">Author tools</div><h2>Publish a chapter</h2><p class="form-note">Save a chapter here and it will be available from the database without a website redeployment. Reuse a chapter slug to update that chapter.</p><form id="chapter-form" class="account-form"><label>Novel<select name="novel_id" required>'+allWorks.map(w=>'<option value="'+esc(w.id)+'">'+esc(w.title)+'</option>').join("")+'</select></label><div class="form-grid"><label>Chapter number<input name="chapter_number" type="number" min="1" required></label><label>Chapter slug<input name="slug" pattern="[a-z0-9-]+" placeholder="chapter-4" required></label></div><label>Chapter title<input name="title" required></label><label>Chapter text<textarea name="body" rows="14" required></textarea></label><label class="check-label"><input name="publish" type="checkbox" checked> Publish immediately</label><div class="form-actions"><button class="reader-btn" type="submit">Save chapter</button></div><p id="chapter-message" class="form-note" role="status"></p></form></section>':'<section class="account-section"><div class="chapter-heading">Author access</div><p class="form-note">This account can save reading progress. Author publishing tools appear after the account is granted author access in the Supabase database.</p></section>');
+ const workOptions=allWorks.map(w=>'<option value="'+esc(w.id)+'">'+esc(w.title)+'</option>').join("");
+ const chapters=allWorks.flatMap(w=>(w.chapters||[]).map(ch=>({...ch,workId:w.id,workTitle:w.title})));
+ const chapterOptions=chapters.map(ch=>'<option value="'+esc(ch.databaseId||ch.workId+"-"+ch.id)+'">'+esc(ch.workTitle+' · '+ch.title+(ch.isPublished?' · Published':' · Draft'))+'</option>').join("");
+ panel.innerHTML='<div class="account-status"><p>Signed in as <strong>'+esc(session.user.email||"reader")+'</strong></p><button id="signout" class="reader-btn" type="button">Sign out</button></div><section class="account-section"><div class="chapter-heading">Reading progress</div>'+progressHtml+'</section>'+(currentUserIsAdmin?'<section class="account-section"><div class="kicker">Author workspace</div><h2>Chapter editor</h2><p class="form-note">Select a saved chapter to edit it, or start a new one. Draft is the default. Preview before publishing; author notes are shown separately from the chapter text.</p><div class="account-form"><label>Edit an existing chapter<select id="existing-chapter"><option value="">Create a new chapter…</option>'+chapterOptions+'</select></label><div class="form-actions"><button id="load-chapter" class="reader-btn" type="button">Load selected chapter</button><button id="new-chapter" class="reader-btn" type="button">New chapter</button></div><p id="chapter-message" class="form-note" role="status"></p><form id="chapter-form" class="account-form"><label>Novel<select name="novel_id" required>'+workOptions+'</select></label><div class="form-grid"><label>Chapter number<input name="chapter_number" type="number" min="1" required></label><label>Chapter slug<input name="slug" pattern="[a-z0-9-]+" placeholder="chapter-4" required></label></div><label>Chapter title<input name="title" required></label><label>Chapter text<textarea name="body" rows="14" required></textarea></label><label>Author note <span class="form-note">(optional, shown after the chapter)</span><textarea name="author_note" rows="4" placeholder="A brief note about this chapter, a dedication, or context for readers."></textarea></label><label class="check-label"><input name="publish" type="checkbox"> Publish this chapter</label><div class="form-actions"><button class="reader-btn" type="button" id="preview-chapter">Preview chapter</button><button class="reader-btn" type="submit">Save chapter</button></div></form><div id="chapter-preview" class="chapter-preview" hidden></div></div></section>':'<section class="account-section"><div class="chapter-heading">Author access</div><p class="form-note">This account can save reading progress. Author tools appear after author access is granted in the database.</p></section>');
  document.getElementById("signout").addEventListener("click",async()=>{await supabaseClient.auth.signOut();currentSession=null;currentUserIsAdmin=false;await refreshFromDatabase(false);renderAccount();});
- const chapterForm=document.getElementById("chapter-form");
- if(chapterForm) chapterForm.addEventListener("submit",async event=>{
+ if(!currentUserIsAdmin)return;
+ const chapterForm=document.getElementById("chapter-form"),message=document.getElementById("chapter-message"),existing=document.getElementById("existing-chapter"),preview=document.getElementById("chapter-preview");
+ function resetEditor(){chapterForm.reset();chapterForm.elements.novel_id.value=allWorks[0]?.id||"";chapterForm.elements.publish.checked=false;existing.value="";preview.hidden=true;preview.innerHTML="";message.textContent="New chapter draft. Nothing is published until you check the publish box and save.";}
+ function renderPreview(){
+  const title=chapterForm.elements.title.value.trim()||"Untitled chapter",body=chapterForm.elements.body.value,note=chapterForm.elements.author_note.value;
+  preview.innerHTML='<div class="preview-toolbar"><span class="kicker">Preview · not published</span><button type="button" class="text-link" id="close-preview">Close preview</button></div><article><h2 class="reader-title">'+esc(formatChapterTitle(title))+'</h2><div class="prose">'+body.split(/\n\s*\n/).map(p=>'<p>'+esc(p)+'</p>').join('')+'</div>'+(note.trim()?'<aside class="author-note"><div class="kicker">A note from the author</div>'+note.split(/\n\s*\n/).map(p=>'<p>'+esc(p)+'</p>').join('')+'</aside>':'')+'</article>';
+  preview.hidden=false;document.getElementById("close-preview").addEventListener("click",()=>{preview.hidden=true;});
+ }
+ document.getElementById("new-chapter").addEventListener("click",resetEditor);
+ document.getElementById("preview-chapter").addEventListener("click",renderPreview);
+ document.getElementById("load-chapter").addEventListener("click",()=>{
+  const selected=chapters.find(ch=>(ch.databaseId||ch.workId+"-"+ch.id)===existing.value);
+  if(!selected){message.textContent="Choose a saved chapter first, or start a new one.";return;}
+  chapterForm.elements.novel_id.value=selected.workId;chapterForm.elements.chapter_number.value=selected.chapterNumber||1;
+  chapterForm.elements.slug.value=selected.id;chapterForm.elements.title.value=selected.title;
+  chapterForm.elements.body.value=selected.content||"";chapterForm.elements.author_note.value=selected.authorNote||"";
+  chapterForm.elements.publish.checked=!!selected.isPublished;preview.hidden=true;
+  message.textContent="Loaded "+selected.title+". Review carefully before saving changes.";
+ });
+ chapterForm.addEventListener("submit",async event=>{
   event.preventDefault();
-  const fd=new FormData(chapterForm);
-  const novelId=String(fd.get("novel_id"));
-  const slug=String(fd.get("slug")).trim();
-  const number=Number(fd.get("chapter_number"));
-  const published=fd.get("publish")==="on";
-  const message=document.getElementById("chapter-message");
+  const fd=new FormData(chapterForm),novelId=String(fd.get("novel_id")),slug=String(fd.get("slug")).trim(),number=Number(fd.get("chapter_number")),published=fd.get("publish")==="on";
+  if(!/^[a-z0-9-]+$/.test(slug)){message.textContent="Use only lowercase letters, numbers, and hyphens in the slug.";return;}
+  if(!Number.isInteger(number)||number<1){message.textContent="Chapter number must be a positive whole number.";return;}
   message.textContent="Saving chapter…";
-  const payload={id:novelId+"-"+slug,novel_id:novelId,slug,title:String(fd.get("title")).trim(),body:String(fd.get("body")),chapter_number:number,status:published?"Published":"Draft",is_published:published,published_at:published?new Date().toISOString():null,updated_at:new Date().toISOString()};
+  const payload={id:novelId+"-"+slug,novel_id:novelId,slug,title:String(fd.get("title")).trim(),body:String(fd.get("body")),author_note:String(fd.get("author_note")||"").trim(),chapter_number:number,status:published?"Published":"Draft",is_published:published,published_at:published?new Date().toISOString():null,updated_at:new Date().toISOString()};
   const result=await supabaseClient.from("chapters").upsert(payload,{onConflict:"id"});
   if(result.error){message.textContent="Could not save chapter: "+result.error.message;return;}
   message.textContent=published?"Chapter saved and published.":"Chapter saved as a draft.";
-  chapterForm.reset();
-  chapterForm.elements.novel_id.value=novelId;
-  chapterForm.elements.publish.checked=true;
   await refreshFromDatabase(false);
+  renderAccount();
  });
 }
-
 function renderSettings(){
  document.title="Reading settings — Last Station";
- const themes=[["dark","Dark"],["light","Light"],["pale","Pale green"],["sepia","Sepia"],["midnight","Midnight blue"]];
+ const themes=[["dark","Dark"],["light","Light"],["pale","Pale green"],["sepia","Sepia"],["midnight","Midnight blue"],["forest","Forest"],["slate","Slate"]];
  let html=crumb("Settings") + '<div class="kicker">Your reading experience</div><h1>Make it comfortable.</h1><p class="intro">Choose a page tone and typeface that make long chapters easier on your eyes. Your settings are saved on this device.</p><div class="settings-panel">';
  html+='<section class="settings-group"><h2>Page theme</h2><p class="settings-help">Change the background and text colors across the site.</p><div class="theme-options">';
  html+=themes.map(([id,label])=>'<button class="theme-choice" type="button" data-theme-choice="' + id + '" aria-pressed="' + (preferences.theme===id) + '">' + label + '</button>').join("");
