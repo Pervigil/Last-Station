@@ -92,11 +92,79 @@ body[data-theme="slate"]{color-scheme:dark;--bg:#17191d;--surface:#202329;--text
   .home-library .series-meta { font-size: 9px; }
 }
 
+
+/* Final polish: consistent alignment, lighter metadata, and a quieter wordmark */
+.logo-mark{width:43px;height:30px;overflow:visible}
+.search-wrap{display:block;width:100%;min-width:0}
+.search-icon{left:14px;top:50%;width:17px;height:17px;transform:translateY(-50%);z-index:1}
+.search{min-height:46px;padding:12px 14px 12px 42px;line-height:1.45;border-radius:3px;appearance:none;-webkit-appearance:none}
+.search::-webkit-search-cancel-button{-webkit-appearance:none}
+.featured-work{gap:12px}
+.featured-topline{min-height:30px}
+.featured-mark{flex:none}
+.featured-bottom{align-items:center;gap:16px}
+.featured-bottom .series-status{font-weight:600;letter-spacing:.08em}
+.featured-open{font-weight:500;white-space:nowrap}
+.home-library .series{grid-template-columns:26px minmax(0,1fr);align-items:start}
+.home-library .series-meta{grid-column:2;display:flex;justify-content:flex-start;align-items:center;margin-top:9px;gap:10px;min-width:0}
+.home-library .series-meta .series-status{font-weight:600;color:var(--accent);letter-spacing:.04em}
+.home-library .series-meta .arrow{margin-left:auto;font-size:16px}
+.detail-tags{align-items:center;gap:10px 18px}
+.detail-tag{border:0;padding:0;font-weight:600;letter-spacing:.06em;color:var(--muted);background:transparent}
+.detail-tag-primary{font-weight:600}
+.chapter-heading{display:flex;align-items:center;gap:2px}
+.chapter-heading-mark{flex:none}
+.chapter-heading>span:last-child{margin-left:auto!important;float:none!important;font-weight:500}
+.chapter{align-items:center}
+.chapter-name{font-size:14px}
+.chapter-sub{display:inline-block;margin-top:5px}
+.reader-top{align-items:center}
+.reader-top>span{font:10px var(--mono);letter-spacing:.08em;white-space:nowrap}
+.reader-title{line-height:1.2}
+.reader-controls{align-items:center}
+.reader-btn{transition:border-color .18s,color .18s}
+.reader-end{margin-top:46px}
+@media(max-width:850px){
+ .home-hero .intro{margin-bottom:12px}
+ .featured-work{margin-top:12px}
+ .home-library .search{margin-bottom:28px}
+ .home-library .series{grid-template-columns:24px minmax(0,1fr);padding:20px 0}
+ .home-library .series-title{font-size:clamp(20px,5.3vw,24px);line-height:1.32}
+ .home-library .series-sub{max-width:58ch}
+ .detail-tags{gap:10px 16px}
+}
+@media(max-width:600px){
+ .header{gap:12px}
+ .logo{gap:6px;font-size:16px}
+ .logo-mark{width:38px;height:27px}
+ .nav{gap:10px;font-size:10px;white-space:nowrap}
+ .home-hero h1{letter-spacing:-.065em}
+ .home-hero .intro{margin-bottom:10px;max-width:38ch}
+ .featured-work{margin-top:12px;padding:14px 0 17px;gap:10px}
+ .featured-title{font-size:clamp(21px,6vw,25px);line-height:1.3}
+ .featured-description{font-size:13px;line-height:1.7}
+ .featured-bottom{font-size:10px}
+ .search-wrap{margin:22px 0 28px}
+ .search{min-height:46px;padding-left:42px;font-size:13px}
+ .search-icon{left:13px;top:50%;transform:translateY(-50%)}
+ .home-library .series{grid-template-columns:22px minmax(0,1fr);gap:10px;padding:20px 0}
+ .home-library .series-title{font-size:21px}
+ .home-library .series-meta{grid-column:2;margin-top:8px}
+ .detail-tags{display:flex;align-items:flex-start;gap:9px 16px;line-height:1.6}
+ .detail-tag{font-size:10px}
+ .chapter{padding:18px 0}
+ .chapter-name{font-size:14px}
+ .reader-top{gap:10px}
+ .reader-top>a{max-width:75%;line-height:1.5}
+ .reader-title{margin-top:30px}
+ .reader-controls .reader-btn{font-size:11px;padding:9px 8px}
+}
+
 </style>
 </head>
 <body>
 <div class="wrap">
-<header class="header"><a href="#/" class="logo" aria-label="Last Station home"><svg class="logo-mark" viewBox="0 0 32 36" aria-hidden="true" focusable="false"><path d="M3 33V3h26v30M3 9h26M8 15h16M8 21h16M8 27h10" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="square"/><path d="M21 27h3" stroke="currentColor" stroke-width="1.35"/></svg><span class="logo-wordmark">Last Station</span></a><nav class="nav"><a href="#/">Works</a><a href="#/about">About</a><a href="#/account">Account</a><a href="#/settings">Settings</a></nav></header>
+<header class="header"><a href="#/" class="logo" aria-label="Last Station home"><svg class="logo-mark" viewBox="0 0 54 36" aria-hidden="true" focusable="false"><path d="M17 4a14 14 0 1 0 13 23A12 12 0 0 1 17 4Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><text x="29" y="26" fill="currentColor" font-family="Georgia,serif" font-size="24" font-style="italic" letter-spacing="-3">Ls</text></svg><span class="logo-wordmark">Last Station</span></a><nav class="nav"><a href="#/">Works</a><a href="#/about">About</a><a href="#/account">Account</a><a href="#/settings">Settings</a></nav></header>
 <main id="app" class="page" aria-live="polite"></main>
 <footer class="foot"><span>LAST STATION © <span id="year"></span></span><span>For the stories still on their way.</span></footer>
 </div>
