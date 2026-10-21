@@ -470,7 +470,22 @@ async function renderAccount(){
   await refreshFromDatabase(false);renderAccount();
  });
  const chapterForm=document.getElementById("chapter-form"),message=document.getElementById("chapter-message"),existing=document.getElementById("existing-chapter"),preview=document.getElementById("chapter-preview");
- function resetEditor(){chapterForm.reset();chapterForm.elements.novel_id.value=allWorks[0]?.id||"";chapterForm.elements.publish.checked=false;existing.value="";preview.hidden=true;preview.innerHTML="";message.textContent="New chapter draft. Nothing is published until you check the publish box and save.";}
+ const bodyField=chapterForm.elements.body;
+  document.querySelectorAll("[data-md]").forEach(button=>button.addEventListener("click",()=>{
+   const action=button.dataset.md,start=bodyField.selectionStart,end=bodyField.selectionEnd,selected=bodyField.value.slice(start,end),before=bodyField.value.slice(0,start),after=bodyField.value.slice(end);let insert="",cursor=start;
+   if(action==="bold"){insert="**"+(selected||"bold text")+"**";cursor=start+2;}
+   else if(action==="italic"){insert="*"+(selected||"italic text")+"*";cursor=start+1;}
+   else if(action==="heading"){insert="# "+(selected||"Heading");cursor=start+2;}
+   else if(action==="quote"){insert="> "+(selected||"Quoted passage");cursor=start+2;}
+   else if(action==="rule"){insert="\n---\n";cursor=start+1;}
+   else if(action==="image"){const url=prompt("Image URL (use a publicly accessible https:// URL):");if(!url)return;const alt=prompt("Short image description:")||"Chapter illustration";if(!/^https:\/\//i.test(url)){alert("Please use an https:// image URL.");return;}insert="!["+alt+"]("+url+")";cursor=start+insert.length;}
+   bodyField.value=before+insert+after;bodyField.focus();bodyField.setSelectionRange(cursor,cursor);
+  }));
+  const selectedChapter=()=>chapters.find(ch=>(ch.databaseId||ch.workId+"-"+ch.id)===existing.value);
+  document.getElementById("export-chapter").addEventListener("click",()=>{const title=chapterForm.elements.title.value.trim()||"untitled-chapter";downloadText(slugify(title)+".txt",chapterForm.elements.body.value);});
+  document.getElementById("export-chapter-md").addEventListener("click",()=>{const title=chapterForm.elements.title.value.trim()||"untitled-chapter";downloadText(slugify(title)+".md","# "+title+"\n\n"+chapterForm.elements.body.value);});
+  document.getElementById("delete-chapter").addEventListener("click",async()=>{const ch=selectedChapter();if(!ch){message.textContent="Load a saved chapter before deleting it.";return;}if(!confirm('Permanently delete "'+ch.title+'"? This cannot be undone.'))return;const result=await supabaseClient.from("chapters").delete().eq("id",ch.databaseId||ch.workId+"-"+ch.id);if(result.error){message.textContent="Could not delete chapter: "+result.error.message;return;}message.textContent="Chapter deleted.";await refreshFromDatabase(false);renderAccount();});
+  function resetEditor(){chapterForm.reset();chapterForm.elements.novel_id.value=allWorks[0]?.id||"";chapterForm.elements.publish.checked=false;existing.value="";preview.hidden=true;preview.innerHTML="";message.textContent="New chapter draft. Nothing is published until you check the publish box and save.";}
  function renderPreview(){
   const title=chapterForm.elements.title.value.trim()||"Untitled chapter",body=chapterForm.elements.body.value,note=chapterForm.elements.author_note.value;
   preview.innerHTML='<div class="preview-toolbar"><span class="kicker">Preview · not published</span><button type="button" class="text-link" id="close-preview">Close preview</button></div><article><h2 class="reader-title">'+esc(formatChapterTitle(title))+'</h2><div class="prose">'+renderRichText(body)+'</div>'+(note.trim()?'<aside class="author-note"><div class="kicker">A note from the author</div>'+note.split(/\n\s*\n/).map(p=>'<p>'+esc(p)+'</p>').join('')+'</aside>':'')+'</article>';
