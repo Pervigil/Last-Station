@@ -190,6 +190,25 @@ body[data-theme="slate"]{color-scheme:dark;--bg:#17191d;--surface:#202329;--text
  .nav{gap:clamp(14px,2vw,22px)}
 }
 
+
+/* Header balance: give the navigation a stronger presence and close the brand gap */
+@media (min-width:851px){
+ .header{gap:clamp(20px,3.5vw,52px)}
+ .nav{gap:clamp(20px,2.6vw,34px);font-size:14px;font-weight:600;color:var(--text)}
+}
+@media (min-width:601px) and (max-width:850px){
+ .header{gap:clamp(18px,3vw,28px)}
+ .nav{gap:clamp(13px,2.2vw,20px);font-size:12px;font-weight:600;color:var(--text)}
+}
+@media (max-width:600px){
+ .header{gap:clamp(14px,4vw,22px)}
+ .nav{gap:clamp(11px,2.6vw,17px);font-size:11px;font-weight:600;color:var(--text)}
+}
+/* Align chapter-count metadata optically with the In Progress status */
+.detail-tags{align-items:center}
+.detail-tag{font-weight:600}
+.detail-tag:not(.detail-tag-primary){position:relative;top:2px}
+
 </style>
 </head>
 <body>
