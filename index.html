@@ -160,11 +160,24 @@ body[data-theme="slate"]{color-scheme:dark;--bg:#17191d;--surface:#202329;--text
  .reader-controls .reader-btn{font-size:11px;padding:9px 8px}
 }
 
+
+/* Icon-only moon mark and a search icon centered independently of text metrics */
+.logo{gap:0;min-width:0}
+.logo-mark{width:44px;height:44px;overflow:visible}
+.search-wrap{height:46px;position:relative;display:block;line-height:0}
+.search-icon{position:absolute!important;left:14px!important;top:0!important;bottom:0!important;margin:auto 0!important;transform:none!important;width:18px!important;height:18px!important;display:block;line-height:normal}
+.search{height:46px;min-height:46px;box-sizing:border-box;line-height:20px}
+@media(max-width:600px){
+ .logo-mark{width:42px;height:42px}
+ .search-wrap{height:46px}
+ .search-icon{left:13px!important;width:18px!important;height:18px!important}
+}
+
 </style>
 </head>
 <body>
 <div class="wrap">
-<header class="header"><a href="#/" class="logo" aria-label="Last Station home"><svg class="logo-mark" viewBox="0 0 54 36" aria-hidden="true" focusable="false"><path d="M17 4a14 14 0 1 0 13 23A12 12 0 0 1 17 4Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><text x="29" y="26" fill="currentColor" font-family="Georgia,serif" font-size="24" font-style="italic" letter-spacing="-3">Ls</text></svg><span class="logo-wordmark">Last Station</span></a><nav class="nav"><a href="#/">Works</a><a href="#/about">About</a><a href="#/account">Account</a><a href="#/settings">Settings</a></nav></header>
+<header class="header"><a href="#/" class="logo" aria-label="Last Station home"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M18 3a17 17 0 1 0 16 27A14.5 14.5 0 0 1 18 3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></a><nav class="nav"><a href="#/">Works</a><a href="#/about">About</a><a href="#/account">Account</a><a href="#/settings">Settings</a></nav></header>
 <main id="app" class="page" aria-live="polite"></main>
 <footer class="foot"><span>LAST STATION © <span id="year"></span></span><span>For the stories still on their way.</span></footer>
 </div>
