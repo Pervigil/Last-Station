@@ -209,6 +209,14 @@ body[data-theme="slate"]{color-scheme:dark;--bg:#17191d;--surface:#202329;--text
 .detail-tag{font-weight:600}
 .detail-tag:not(.detail-tag-primary){position:relative;top:2px}
 
+
+/* Tablet/mobile landscape header: eliminate space-between stretching and enlarge tabs */
+@media (min-width:601px) and (max-width:850px){
+ .header{justify-content:flex-start;gap:24px}
+ .nav{margin-left:0;gap:20px;font-size:14px;font-weight:600;color:var(--text)}
+}
+.detail-tag:not(.detail-tag-primary){top:1px}
+
 </style>
 </head>
 <body>
