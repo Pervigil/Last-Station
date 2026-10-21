@@ -388,7 +388,7 @@ async function refreshFromDatabase(shouldRender=true){
    if(!chaptersByNovel[ch.novel_id]) chaptersByNovel[ch.novel_id]=[];
    chaptersByNovel[ch.novel_id].push({id:ch.slug, databaseId:ch.id, title:ch.title, status:ch.status, placeholder:false, content:ch.body, authorNote:ch.author_note||'', chapterNumber:ch.chapter_number, isPublished:ch.is_published, updatedAt:ch.updated_at});
   });
-  allWorks=(novelsResult.data||[]).filter(n=>currentUserIsAdmin||n.is_published).map(n=>{const chapters=chaptersByNovel[n.id]||[];const activity=[n.updated_at,...chapters.map(ch=>ch.updatedAt)].filter(Boolean).sort().pop();return {id:n.id,title:n.title,type:n.genre,status:n.status,description:n.description,longDescription:n.long_description,updatedAt:n.updated_at,lastActivity:activity,chapters};});
+  allWorks=(novelsResult.data||[]).filter(n=>currentUserIsAdmin||n.is_published).map(n=>{const chapters=chaptersByNovel[n.id]||[];const activity=[n.updated_at,...chapters.map(ch=>ch.updatedAt)].filter(Boolean).sort().pop();return {id:n.id,title:n.title,type:n.genre,status:n.status,description:n.description,longDescription:n.long_description,isPublished:n.is_published,updatedAt:n.updated_at,lastActivity:activity,chapters};});
   if(shouldRender) render();
  }catch(error){console.error("Supabase loading failed:",error);}
 }
