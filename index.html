@@ -239,6 +239,17 @@ body[data-theme="slate"]{color-scheme:dark;--bg:#17191d;--surface:#202329;--text
  .logo{margin-left:clamp(8px,3vw,16px)}
  .nav{font-size:11px!important;font-weight:600;gap:clamp(10px,2.4vw,14px)}
 }
+/* Desktop header: balanced brand on the left, confident navigation on the right.
+   Mobile styles remain intentionally untouched. */
+@media (min-width:851px){
+ .header{justify-content:space-between;gap:32px}
+ .logo{margin-left:clamp(8px,1.5vw,20px)}
+ .nav{margin-left:auto;gap:clamp(28px,3vw,44px);font-size:16px!important;font-weight:600;letter-spacing:.01em;color:var(--muted)}
+ .nav a{position:relative;padding:10px 0;transition:color .18s ease}
+ .nav a:hover{color:var(--text)}
+ .nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .18s ease}
+ .nav a:hover::after{transform:scaleX(1)}
+}
 /* Vercel Web Analytics for this static HTML site */
 
 </style>
