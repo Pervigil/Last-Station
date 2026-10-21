@@ -223,7 +223,29 @@ body[data-theme="slate"]{color-scheme:dark;--bg:#17191d;--surface:#202329;--text
  .nav{font-size:19px;font-weight:600;gap:clamp(18px,2.4vw,30px)}
 }
 
+
+/* Subtle editorial finish: shift the crescent inward and add a quiet center mark */
+.header{position:relative}
+.header::after{content:"";position:absolute;left:50%;bottom:-1px;width:42px;border-bottom:1px solid var(--accent);opacity:.7;transform:translateX(-50%)}
+@media (min-width:851px){
+ .logo{margin-left:clamp(16px,4vw,64px)}
+ .nav{font-size:19px!important;font-weight:600;gap:clamp(20px,2.4vw,32px)}
+}
+@media (min-width:601px) and (max-width:850px){
+ .logo{margin-left:clamp(10px,3vw,24px)}
+ .nav{font-size:15px!important;font-weight:600;gap:clamp(14px,2vw,22px)}
+}
+@media (max-width:600px){
+ .logo{margin-left:clamp(8px,3vw,16px)}
+ .nav{font-size:11px!important;font-weight:600;gap:clamp(10px,2.4vw,14px)}
+}
+/* Vercel Web Analytics for this static HTML site */
+
 </style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <div class="wrap">
