@@ -518,3 +518,9 @@ window.addEventListener('hashchange',handleHashChange);render();refreshFromDatab
 </script>
 </body>
 </html>
+
+/* Center the desktop monogram in the space before the navigation.
+   Leave the mobile header exactly as it is. */
+@media (min-width:851px){
+ .logo{transform:translateX(clamp(36px,6vw,88px))}
+}
